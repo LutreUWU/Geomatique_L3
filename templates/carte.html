@@ -20,20 +20,23 @@
 Lancer le programme avec flask --debug run  
 -->
 
+<body>
+    <form id="entete" action="" style="padding:1vw; margin:1%">
+        <input type="text" id="recherche">
+        <button id="button">OK</button>
+    </form>
+    <div id="map"></div>
+    <script src="../static/js/map.js"></script>
+</body> 
 <!--
 Objectif 16/10/25:
 
 Créer une barre de recherche où on renseigne une adresse, et lorsqu'on appuit sur le bouton,
 on nous renvoie sur l'adresse.
 
+Cours 6/11/25 :
+
+Concurrent de la bibliothèque Leaflet : 
+- OpenLayers, est une librarie open source + "métier", qui nous permet de faire des projections
+- API Google Maps, est une librarie PAYANTE -> permet de récupérer les données de Google
 -->
-
-<body>
-    <form id="entete" action="" style="background-color:lightcyan; padding:1vw;">
-        <input type="text" id="recherche">
-        <button id="button">OK</button>
-    </form>
-    <div id="map"></div>
-    <script src="../static/map.js"></script>
-</body>
-

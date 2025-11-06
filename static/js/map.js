@@ -17,7 +17,7 @@ let markers = L.geoJSON().bindPopup(function (layer) {
 
 // Pour empêcher le refresh de la balise form
 var form = document.getElementById("entete");
-function handleForm(event) { event.preventDefault(); } 
+function handleForm(event) { event.preventDefault(); }
 form.addEventListener('submit', handleForm);
 
 // Requête API à la base de donnée geopf
@@ -25,9 +25,9 @@ function request_API(input){
     var url = `https://data.geopf.fr/geocodage/search?q=${input}`;
     fetch(url)
     .then(r => r.json())
-    .then(json => {
-        markers.addData(json);
-        map.fitBounds(markers.getBounds());
+    .then(json => { // Centrer la carte sur tout les points obtenus
+        markers.addData(json); 
+        map.fitBounds(markers.getBounds()); 
     })
 }
 
