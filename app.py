@@ -10,3 +10,6 @@ def map():
 def seisme():
     return render_template('carte_seisme.html')
 
+@app.route('/lignedroite')
+def lignedroite():
+    return render_template('lignedroite.html')
