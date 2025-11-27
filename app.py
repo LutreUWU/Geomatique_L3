@@ -13,3 +13,7 @@ def seisme():
 @app.route('/lignedroite')
 def lignedroite():
     return render_template('lignedroite.html')
+
+@app.route('/restaurant')
+def restaurant():
+    return render_template('restaurant.html')
